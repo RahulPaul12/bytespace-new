@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from 'next/font/local'
 import "./style/globals.css";
+import "../public/icon/iconly.css"
 
 
 const poppinSans = Poppins({

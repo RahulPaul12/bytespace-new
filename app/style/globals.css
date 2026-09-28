@@ -2,12 +2,23 @@
 
 @theme {
   --color-primary: #003BE2;
+  --color-secondary: #D4FB20;
+  --color-black-shadow: #242528;
+  --color-gray: #82868E;
   --font-heading: var(--font-poppins), system-ui, sans-serif;
   --font-body: var(--font-satoshi), system-ui, sans-serif;
 }
 
 @layer base {
+  h1,h2,h3,h4,h5,h6 {@apply font-heading}
+  button {@apply cursor-pointer}
   body {@apply font-body font-semibold}
+  .bg-grid {@apply bg-[url('/images/bg-grid.png')] bg-center bg-primary}
+  .field-label { @apply text-sm font-medium text-black-shadow mb-2}
+  .field-input {@apply border border-[#E5E6E8] rounded-xl px-6 py-3 text-lg font-normal leading-normal focus-within:border-primary outline-none}
+  input::placeholder{@apply text-lg font-normal text-gray}
+  .primary-btn {@apply text-lg font-medium text-black rounded-full px-6 py-3 bg-secondary text-center leading-tight}
+  .social-login {@apply p-4 border border-[#D1D1D1] rounded-3xl flex items-center justify-center w-fit}
 }
 
 @layer utilities {
