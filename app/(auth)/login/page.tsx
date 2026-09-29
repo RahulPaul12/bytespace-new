@@ -1,15 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
-
+import authimage from "@/public/images/auth-img.png"
 const LoginPage = () => {
     return (
         <main className="min-h-dvh w-full flex items-center justify-center bg-grid">
-            <div className="container lg:py-30 py-20">
-                <div className="flex gap-x-16 gap-y-6">
-                    <div className="lg:basis-1/2 hidden">
+            <div className="container lg:py-30 py-40">
+                <div className="flex justify-center gap-x-16 gap-y-6">
+                    <div className="lg:basis-1/2 lg:block hidden">
                         <h6 className="text-xl font-semibold text-[#F5F5F6] mb-4">Sign in with ease</h6>
                         <p className="text-lg text-[#F5F5F6] font-normal">Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
-                        <Image src="/profile.png" alt="Picture of the author" width={500} height={500}/>
+                        <Image className="mt-20" src={authimage} alt="Picture of the author" width={550} height={585}/>
                     </div>
                     <div className="max-w-145 w-full bg-white rounded-3xl px-12 lg:px-15 pt-16 pb-10">
                         <p className="text-lg font-normal text-primary">Sign In</p>
@@ -38,7 +38,7 @@ const LoginPage = () => {
                                 <i className="icon-google text-[40px]"></i>
                             </Link>
                         </div>
-                        <p className="text-center pt-10 text-base font-normal text-[#888888]">New user? <Link href={""} className="text-primary">Create an account</Link></p>
+                        <p className="text-center pt-10 text-base font-normal text-[#888888]">New user? <Link href="/registration" className="text-primary">Create an account</Link></p>
                     </div>
                 </div>
             </div>
