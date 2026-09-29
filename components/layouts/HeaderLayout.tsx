@@ -9,7 +9,7 @@ const HeaderLayout = () => {
                     <Image className="h-9 w-auto" src={logo} alt="logo" width={200} height={36} />
                 </Link>
                 <div className="hidden md:flex gap-6">
-                    <Link href={""} className="navlink">Home</Link>
+                    <Link href={"/"} className="navlink">Home</Link>
                     <Link href={"/course"} className="navlink">Courses</Link>
                     <Link href={"creator"} className="navlink">Creators</Link>
                 </div>
