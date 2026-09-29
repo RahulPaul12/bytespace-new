@@ -11,7 +11,7 @@ const HeaderLayout = () => {
                 <div className="hidden md:flex gap-6">
                     <Link href={"/"} className="navlink">Home</Link>
                     <Link href={"/course"} className="navlink">Courses</Link>
-                    <Link href={"creator"} className="navlink">Creators</Link>
+                    <Link href={"/creator"} className="navlink">Creators</Link>
                 </div>
                 <div className="flex items-center gap-6">
                     <Link href="/login" className="hidden sm:block navlink">Sign In</Link>
