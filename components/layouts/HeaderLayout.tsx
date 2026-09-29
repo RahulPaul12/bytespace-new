@@ -9,13 +9,13 @@ const HeaderLayout = () => {
                     <Image className="h-9 w-auto" src={logo} alt="logo" width={200} height={36} />
                 </Link>
                 <div className="hidden md:flex gap-6">
-                    <Link href={""} className="text-base font-normal text-[#F5F5F6]">Home</Link>
-                    <Link href={"/course"} className="text-base font-normal text-[#F5F5F6]">Courses</Link>
-                    <Link href={""} className="text-base font-normal text-[#F5F5F6]">Creators</Link>
+                    <Link href={""} className="navlink">Home</Link>
+                    <Link href={"/course"} className="navlink">Courses</Link>
+                    <Link href={"creator"} className="navlink">Creators</Link>
                 </div>
                 <div className="flex items-center gap-6">
-                    <Link href="/login" className="hidden sm:block text-base font-normal text-[#F5F5F6]">Sign In</Link>
-                    <Link href="/registration" className="hidden sm:block text-base font-normal text-[#F5F5F6]">Join Us</Link>
+                    <Link href="/login" className="hidden sm:block navlink">Sign In</Link>
+                    <Link href="/registration" className="hidden sm:block navlink">Join Us</Link>
                     <Link href="/cart" aria-label="Cart">
                         <i className="icon-cart text-2xl"></i>
                     </Link>

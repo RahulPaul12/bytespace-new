@@ -1,4 +1,5 @@
 import CardComponent from "@/components/ui/CardComponent"
+import { courses } from "@/data/course"
 const Course = () => {
     return (
     <main className="w-full">
@@ -43,7 +44,9 @@ const Course = () => {
                 <button className="category-btn">Cooking</button>
             </div>
             <div className="pt-4 sm:pt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-                <CardComponent/>
+                {courses.map((course) => (
+                    <CardComponent key={course.slug} {...course} />
+                ))}
             </div>
         </section>
     </main>

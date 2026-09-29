@@ -7,8 +7,8 @@
   font-family: "Iconly";
   font-style: normal;
   font-weight: 400;
-  src: url("./iconly.eot?1790661400238");
-  src: url("./iconly.eot?#iefix") format("embedded-opentype"), url("./iconly.woff2?1790661400238") format("woff2"), url("./iconly.woff?1790661400238") format("woff"), url("./iconly.ttf?1790661400238") format("truetype"), url("./iconly.svg?1790661400238#Iconly") format("svg");
+  src: url("./iconly.eot?1790677229742");
+  src: url("./iconly.eot?#iefix") format("embedded-opentype"), url("./iconly.woff2?1790677229742") format("woff2"), url("./iconly.woff?1790677229742") format("woff"), url("./iconly.ttf?1790677229742") format("truetype"), url("./iconly.svg?1790677229742#Iconly") format("svg");
 }
 
 [class="icon"], [class^="icon-"], [class*=" icon-"] {
@@ -41,6 +41,10 @@
 
 .icon-business:before {
   content: "\e004";
+}
+
+.icon-play:before {
+  content: "\e005";
 }
 
 .icon-certificate:before {
