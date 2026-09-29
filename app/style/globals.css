@@ -2,12 +2,41 @@
 
 @theme {
   --color-primary: #003BE2;
+  --color-secondary: #D4FB20;
+  --color-black-shadow: #242528;
+  --color-gray: #82868E;
   --font-heading: var(--font-poppins), system-ui, sans-serif;
   --font-body: var(--font-satoshi), system-ui, sans-serif;
 }
 
 @layer base {
+  h1,h2,h3,h4,h5,h6 {@apply font-heading}
+  button {@apply cursor-pointer}
   body {@apply font-body font-semibold}
+  .bg-grid {@apply bg-[url('/images/bg-grid.png')] bg-center bg-primary}
+  .field-label { @apply text-sm font-medium text-black-shadow mb-2}
+  .field-input {@apply border border-[#E5E6E8] rounded-xl px-6 py-3 text-lg font-normal leading-normal focus-within:border-primary outline-none}
+  input::placeholder{@apply text-lg font-normal text-gray}
+  .primary-btn {@apply text-lg font-medium text-black rounded-full px-6 py-3 bg-secondary text-center leading-tight flex items-center gap-2}
+  .social-login {@apply p-4 border border-[#D1D1D1] rounded-3xl flex items-center justify-center w-fit}
+
+  .filter-btn {@apply flex items-center gap-1 border border-[#CED0D3] text-[#4B4C53] rounded-full px-4 py-3 text-base font-medium leading-tight}
+  .category-btn {@apply text-[#4B4C53] text-base font-medium rounded-full px-4 py-2.5 bg-[#F5F5F6] shrink-0}
+
+
+  .card-content {@apply bg-white/60 backdrop-blur rounded-full px-3 py-1.5 shrink-0 text-xs font-medium text-[#4F4F4F]}
+  .card-desc {@apply text-xs font-normal text-[#4F4F4F]}
+  .card-rating {@apply text-lg font-normal text-[#4F4F4F] flex items-center}
+  .card-tag {@apply flex items-center gap-1.5 bg-[#F5F5F6] rounded-full px-3 py-1.5 text-[#4B4C53] text-xs font-medium}
+  .card-price {@apply mt-4 font-semibold text-xl text-primary}
+  .card-price span {@apply text-xs font-body text-[#4F4F4F] font-normal}
+  .card-user-text {@apply w-8 h-8 rounded-full bg-secondary text-xs font-medium grid place-items-center}
+
+  .footer-link {@apply grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 text-sm font-normal text-black-shadow lg:justify-items-start}
+  .copyright-section {@apply mt-16 pt-5.5 border-t border-[#CED0D3] flex flex-col-reverse sm:flex-row sm:items-center items-center sm:justify-between gap-4 text-xs font-normal text-black-shadow}
+
+  .big404 {@apply text-[clamp(9rem,32vw,24rem)] leading-[.8] font-bold tracking-[-.02em] bg-[linear-gradient(180deg,#D4F71C_0%,#b9e51f_45%,rgba(0,55,245,0)_100%)] bg-clip-text text-transparent}
+  .not-found-heading {@apply text-white mt-[-9vw] sm:mt-[-6vw] lg:-mt-16 text-3xl sm:text-5xl lg:text-6xl font-semibold leading-tight max-w-[15ch] sm:max-w-[18ch]}
 }
 
 @layer utilities {
