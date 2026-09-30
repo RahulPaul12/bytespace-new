@@ -5,11 +5,11 @@ import Link from "next/link"
 const CourseDetails = () => {
     return (
         <>
-        <section className="bg-grid pt-30 sm:pt-40 pb-12 sm:pb-16 mb-9">
+        <section className="bg-grid pt-40 pb-12 sm:pb-18 mb-9">
             <div className="container">
                 <div className="flex items-start justify-between gap-4">
                     <div className="text-[#F5F5F6]">
-                        <h1 className="font-semibold text-2xl md:text-[36px]">Build Digital Asset: A Comprehensive Guide</h1>
+                        <h1 className="section-heading text-left">Build Digital Asset: A Comprehensive Guide</h1>
                         <h6 className="font-semibold text-xl">Unlock the Power of Digital Creation with Expert Guidance</h6>
                         <p className="card-desc text-[#F5F5F6] mt-6">by <span className="text-secondary">purepearl studio</span></p>
                     </div>
@@ -19,8 +19,8 @@ const CourseDetails = () => {
                 </div>
                 <div className="mt-6 flex flex-wrap gap-4">
                     <span className="course-content-tag"><i className="text-primary text-xl icon-level"></i>Intermediate</span>
-                    <span className="course-content-tag"><i className="text-xl icon-star"></i> 4.6 (172 reviews)</span>
-                    <span className="course-content-tag"><i className="text-xl icon-user"></i> 199 Students</span>
+                    <span className="course-content-tag"><i className="text-primary text-xl icon-star"></i> 4.6 (172 reviews)</span>
+                    <span className="course-content-tag"><i className="text-primary text-xl icon-user"></i> 199 Students</span>
                 </div>
                 <div className="relative mt-15">
                     <div className="lg:mr-120">
@@ -32,7 +32,7 @@ const CourseDetails = () => {
                         </div>
                     </div>
                     <aside className="relative z-10 mt-6 lg:absolute lg:top-0 lg:right-0 lg:mt-0 lg:w-103">
-                        <div className="bg-white rounded-3xl border border-[#CED0D3] p-10">
+                        <div className="bg-white rounded-3xl border border-[#CED0D3] p-8 lg:p-10">
                             <h2 className="font-semibold text-xl">112 Lessons (24 hours)</h2>
                             <ol className="mt-6 space-y-3">
                                 <li className="grid grid-cols-[2rem_1fr_auto] items-start gap-x-3">

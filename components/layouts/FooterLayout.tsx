@@ -5,19 +5,19 @@ const FooterLayout = () => {
     return (
         <footer className="w-full border-t border-[#CED0D3]">
             <div className="container pt-18 pb-12">
-                <div className="grid gap-12 lg:gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-                    <div className="sm:max-w-md">
+                <div className="lg:pb-16 grid gap-12 lg:gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
+                    <div className="sm:max-w-lg">
                         <Link href={""} className="inline-flex items-center gap-2" aria-label="ByteSpace home">
                             <Image className="h-9 w-auto" src={logo} alt="logo" width={200} height={36} />
                         </Link>
                         <p className="mt-4 text-sm font-normal text-black-shadow">Stay Up to date with our latest features and releases by joining our newsletter.</p>
-                        <form className="mt-11 flex flex-col sm:flex-row gap-3">
+                        <form className="mt-11 flex flex-col sm:flex-row gap-6">
                             <label className="flex-1">
                                 <input type="email" required placeholder="Enter your email" className="field-input rounded-full w-full"/>
                             </label>
-                            <button type="submit" className="primary-btn">Search</button>
+                            <button type="submit" className="primary-btn h-11">Search</button>
                         </form>
-                        <p className="mt-6 text-xs font-normal text-black-shadow max-w-85">
+                        <p className="mt-6 text-xs font-normal text-black-shadow">
                           By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
                         </p>
                     </div>

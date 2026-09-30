@@ -1,13 +1,14 @@
 import CardComponent from "@/components/ui/CardComponent"
+import PaginationComponent from "@/components/ui/PaginationComponent"
 import { courses } from "@/data/course"
 const Course = () => {
     return (
-    <main className="w-full">
-        <section className="bg-grid pt-30 sm:pt-40 pb-12 sm:pb-18 mb-9">
+    <>
+        <section className="bg-grid pt-40 pb-12 sm:pb-18 mb-9">
             <div className="container">
-                <h1 className="font-semibold text-3xl md:text-4xl text-center text-white">Find Your Next Course</h1>
+                <h1 className="section-heading">Find Your Next Course</h1>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <label className="flex items-center gap-3 bg-white text-neutral-900 rounded-full h-12 px-5 w-full sm:w-105">
+                    <label className="flex items-center gap-3 bg-white text-black-shadow rounded-full h-13 px-5 w-full sm:w-105">
                       <i className="icon-search text-gray text-2xl"></i>
                       <input type="search" placeholder="Search" className="w-full outline-none text-sm placeholder:text-neutral-400 bg-transparent"/>
                     </label>
@@ -33,7 +34,7 @@ const Course = () => {
                 </button>
             </div>
             <div className="my-8 flex gap-4 overflow-x-auto pb-2 scrollbar-none">
-                <button className="category-btn">Featured</button>
+                <button className="category-btn bg-secondary!">Featured</button>
                 <button className="category-btn">Music</button>
                 <button className="category-btn">Drawing &amp; Painting</button>
                 <button className="category-btn">Marketing</button>
@@ -43,13 +44,16 @@ const Course = () => {
                 <button className="category-btn">Creative Marketing</button>
                 <button className="category-btn">Cooking</button>
             </div>
-            <div className="pt-4 sm:pt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-                {courses.map((course) => (
-                    <CardComponent key={course.slug} {...course} />
-                ))}
+            <div className="pt-4 sm:pt-10">
+                <div className=" grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    {courses.map((course) => (
+                        <CardComponent key={course.slug} {...course} />
+                    ))}
+                </div>
+                <PaginationComponent/>
             </div>
         </section>
-    </main>
+    </>
     )
 }
 

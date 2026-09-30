@@ -2,12 +2,12 @@ import { CardProps } from "@/types/course"
 import Image from "next/image"
 import Link from "next/link"
 
-const CardComponent = ({ slug, title, author, image, price, priceLabel, rating, level, lessons, duration, comments }: CardProps) => {
+const CardComponent = ({ slug, title, author, image, price, rating, level, lessons, duration, comments }: CardProps) => {
     return (
-        <Link href={`/course/${slug}`} className="border border-[#CED0D3] rounded-xl p-3">
+        <Link href={`/course/${slug}`} className="border border-[#CED0D3] rounded-3xl p-4">
             <div className="relative h-49 rounded-xl overflow-hidden mb-5">
                 <Image className="w-full h-full object-cover" src={image} alt={title} width={400} height={400}/>
-                <div className="absolute inset-x-0 bottom-5 mx-auto w-fit flex items-center gap-3">
+                <div className="absolute inset-x-3 bottom-5 mx-auto w-fit flex flex-wrap items-center gap-3">
                     <span className="card-content">{lessons}</span>
                     <span className="card-content">{duration}</span>
                     <span className="card-content">{comments}</span>
@@ -41,7 +41,7 @@ const CardComponent = ({ slug, title, author, image, price, priceLabel, rating, 
                         <span className="card-user-text">26+</span>
                     </div>
                 </div>
-                <h6 className="card-price">{price}<span>{priceLabel}</span></h6>
+                <h6 className="card-price">{price}<span>/lifetime</span></h6>
             </div>
         </Link>
     )

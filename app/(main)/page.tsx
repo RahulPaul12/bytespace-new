@@ -7,13 +7,13 @@ import LogoSliderComponent from "@/components/ui/LogoSliderComponent";
 export default function Home() {
     return (
         <main>
-            <section className="bg-grid pt-30 sm:pt-40 relative">
+            <section className="bg-grid pt-40 relative">
                 <Image className="absolute inset-0 z-0 w-full h-full object-none md:object-cover" src={"/images/bg/hero-bg.png"} width={1300} height={1000} alt="hero"/>
                 <div className="container relative">
                     <h1 className="font-semibold text-3xl md:text-[72px] text-center text-white max-w-233.75 mx-auto leading-[1.15]">Get Access to Hundreds Courses Available</h1>
                     <p className="text-lg font-normal mt-8 text-[#E5E6E8] text-center">Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.</p>
                     <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-                        <label className="flex items-center gap-3 bg-white text-neutral-900 rounded-full h-12 px-5 w-full sm:w-105">
+                        <label className="flex items-center gap-3 bg-white text-black-shadow rounded-full h-13 px-5 w-full sm:w-105">
                           <i className="icon-search text-gray text-2xl"></i>
                           <input type="search" placeholder="Search" className="w-full outline-none text-sm placeholder:text-neutral-400 bg-transparent"/>
                         </label>
@@ -21,8 +21,8 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="relative z-10 mx-auto w-full max-w-285 h-100 md:h-135 overflow-hidden">
-                    <img src="/images/hero-man.png" alt="Learner with headphones" className="absolute bottom-0 left-1/2 -translate-x-1/2 md:h-135.25 h-105 w-auto object-cover z-10"/>
-                    <img src="/images/bg/hero-circ.png" alt="Learner with headphones" className="absolute bottom-0 left-1/2 -translate-x-1/2 h-auto w-[160%] max-w-none sm:w-full"/>
+                    <Image src="/images/hero-man.png" alt="Learner with headphones" className="absolute bottom-0 left-1/2 -translate-x-1/2 md:h-135.25 h-105 w-auto object-cover z-10" width={1200} height={1200}/>
+                    <Image src="/images/bg/hero-circ.png" alt="Learner with headphones" className="absolute bottom-0 left-1/2 -translate-x-1/2 h-auto w-[160%] max-w-none sm:w-full" width={1200} height={1200}/>
                     <div className="hidden sm:block absolute left-2 sm:left-[16%] top-10 sm:top-40 bg-white rounded-2xl p-3 sm:p-4 z-20">
                         <p className="text-sm sm:text-base font-medium text-black-shadow">UI/UX Design</p>
                         <p className="text-xs text-gray">200 Courses &nbsp;•&nbsp; 1000+ Students</p>
@@ -70,9 +70,9 @@ export default function Home() {
             </section>
 
             <section className="container py-9">
-                <div className="text-center mb-10.5 max-w-235 mx-auto w-full">
+                <div className="text-center mb-10.5 max-w-220 mx-auto w-full">
                     <h2 className="max-w-145 mx-auto w-full mb-4 text-[44px] font-semibold text-[#040819]">Discover Your Passion, Build Your Skills</h2>
-                    <p className="text-lg font-normal text-gray">At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.</p>
+                    <p className="hero-section-desc text-gray">At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.</p>
                 </div>
                 <div className="mb-9 flex gap-x-4 gap-y-5 overflow-x-auto pb-2 sm:mx-auto sm:px-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:max-w-6xl">
                     <button className="category-btn">Featured</button>
@@ -103,9 +103,9 @@ export default function Home() {
             </section>
 
             <section className="container mt-9 mb-15">
-                <div className="text-center mb-10.5 max-w-235 mx-auto w-full">
+                <div className="text-center mb-16 max-w-220 mx-auto w-full">
                     <h2 className="mb-4 text-[36px] font-semibold text-[#040819]">Explore Diverse Learning Paths at Bytespace</h2>
-                    <p className="text-lg font-normal text-gray">At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.</p>
+                    <p className="hero-section-desc text-gray">At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.</p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
                     <div className="learning-card">
@@ -157,7 +157,7 @@ export default function Home() {
                         <div className="absolute -top-28 -right-24 w-[360px] h-[360px] rounded-full bg-primary/10 blur-[100px]"></div>
                     </div>
                     <div className="relative px-5 py-14 sm:py-18 container">
-                        <div className="grid gap-5 lg:grid-cols-2 lg:gap-18 items-center justify-items-center mb-12">
+                        <div className="grid gap-5 lg:grid-cols-2 lg:gap-18 items-center justify-items-center mb-18">
                             <div className="lg:order-1 order-2">
                                 <h2 className="font-semibold text-3xl sm:text-[44px] lg:text-[40px] leading-tight text-center lg:text-left">Your Path to Professional Growth Starts Here!</h2>
                                 <p className="review-desc mt-10 text-center! lg:text-left! mx-auto">Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.</p>
@@ -193,60 +193,60 @@ export default function Home() {
             <section className="relative overflow-hidden bg-grid">
                 <Image className="absolute inset-0 z-0 w-full h-full object-none sm:object-fill" src={"/images/bg/cta-bg.png"} width={1300} height={1000} alt="hero"/>
                 <div className="relative z-10 px-5 py-21 text-center">
-                    <h2 className="max-w-2xl mx-auto text-[#F5F5F6] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-tight">Unlock Your Potential as a Creator with ByteSpace</h2>
-                    <p className="max-w-230 mx-auto w-full mt-6 sm:mt-10 font-normal text-sm sm:text-lg leading-6 sm:leading-7 text-[#D1D1D1]">
+                    <h2 className="home-section-header max-w-2xl mx-auto text-[#F5F5F6]">Unlock Your Potential as a Creator with ByteSpace</h2>
+                    <p className="max-w-230 mx-auto w-full mt-6 sm:mt-10 home-section-desc text-[#D1D1D1]">
                       Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
                     </p>
                     <Link href="/registration" className="mt-8 sm:mt-10 primary-btn w-fit mx-auto"> Join as Creator</Link>
                 </div>
             </section>
 
-            <section className="pt-15 mb-15">
+            <section>
                 <div className="relative overflow-hidden bg-[#F7F9F2]">
                     <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-                        <div className="review-gradient-1"></div>
-                        <div className="review-gradient-2"></div>
-                        <div className="review-gradient-3"></div>
+                        <div className="testimonial-gradient-1"></div>
+                        <div className="testimonial-gradient-2"></div>
+                        <div className="testimonial-gradient-3"></div>
                     </div>
                     <div className="relative px-5 py-14 sm:py-18 container">
                         <div className="grid gap-5 lg:grid-cols-2 lg:gap-16 lg:items-end max-lg:justify-items-center">
-                            <h2 className="review-header"> Discover What Our Community Is Saying</h2>
-                            <p className="review-desc"> At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.</p>
+                            <h2 className="home-section-header max-w-xl text-center lg:text-left"> Discover What Our Community Is Saying</h2>
+                            <p className="testimonial-desc home-section-desc"> At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.</p>
                         </div>
                         <div className="mt-10 sm:mt-18 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 items-start">
-                            <figure className="review-card">
-                                <div className="review-img">
+                            <figure className="testimonial-card">
+                                <div className="testimonial-img">
                                     <Image src="/images/user/review-1.png" alt="review-1" width={80} height={80}/>
                                 </div>
                                 <figcaption className="mt-6">
                                     <h6 className="font-semibold text-xl">Sarah M.</h6>
                                     <p className="text-lg font-normal text-primary">Enthusiastic Learner</p>
                                 </figcaption>
-                                <blockquote className="review-text">
+                                <blockquote className="testimonial-text">
                                     "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."
                                 </blockquote>
                             </figure>
-                            <figure className="review-card">
-                                <div className="review-img">
+                            <figure className="testimonial-card">
+                                <div className="testimonial-img">
                                     <Image src="/images/user/review-2.png" alt="review-1" width={80} height={80}/>
                                 </div>
                                 <figcaption className="mt-6">
                                     <h6 className="font-semibold text-xl">James L.</h6>
                                     <p className="text-lg font-normal text-primary">Lifelong Learner</p>
                                 </figcaption>
-                                <blockquote className="review-text">
+                                <blockquote className="testimonial-text">
                                     "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."
                                 </blockquote>
                             </figure>
-                            <figure className="review-card">
-                                <div className="review-img">
+                            <figure className="testimonial-card">
+                                <div className="testimonial-img">
                                     <Image src="/images/user/review-3.png" alt="review-1" width={80} height={80}/>
                                 </div>
                                 <figcaption className="mt-6">
                                     <h6 className="font-semibold text-xl">Alex B.</h6>
                                     <p className="text-lg font-normal text-primary">Inspired Creator</p>
                                 </figcaption>
-                                <blockquote className="review-text">
+                                <blockquote className="testimonial-text">
                                     "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally."
                                 </blockquote>
                             </figure>
