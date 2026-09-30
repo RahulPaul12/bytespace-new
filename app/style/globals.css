@@ -7,6 +7,11 @@
   --color-gray: #82868E;
   --font-heading: var(--font-poppins), system-ui, sans-serif;
   --font-body: var(--font-satoshi), system-ui, sans-serif;
+  --animate-slider: infiniteSlider 30s linear infinite;
+  @keyframes infiniteSlider {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
 }
 
 @layer base {
@@ -20,10 +25,27 @@
   .primary-btn {@apply text-lg font-medium text-black rounded-full px-6 py-3 bg-secondary text-center leading-tight flex items-center justify-center gap-2}
   .social-login {@apply p-4 border border-[#D1D1D1] rounded-3xl flex items-center justify-center w-fit}
 
+  .header {@apply absolute top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent text-white pt-10 pb-12}
+
   .navlink {@apply text-base font-normal text-[#F5F5F6]}
+  .navlink.active {@apply font-medium text-[#F5F5F6]}
 
   .filter-btn {@apply flex items-center gap-1 border border-[#CED0D3] text-[#4B4C53] rounded-full px-4 py-3 text-base font-medium leading-tight}
   .category-btn {@apply text-[#4B4C53] text-base font-medium rounded-full px-4 py-2.5 bg-[#F5F5F6] shrink-0}
+
+  .learning-card{@apply rounded-3xl w-41 h-41 shrink-0 flex flex-col items-center justify-center border border-[#CED0D3]}
+  .learning-card-icon{@apply mb-3 w-15 h-15 bg-secondary rounded-full flex items-center justify-center}
+  .learning-card-desc {@apply font-medium text-xl text-black-shadow}
+
+  .review-gradient-1 {@apply absolute -top-24 left-[35%] w-105 h-105 rounded-full bg-secondary/60 blur-[110px]}
+  .review-gradient-2 {@apply absolute top-[35%] -right-24 w-95 h-95 rounded-full bg-secondary/70 blur-[180px]}
+  .review-gradient-3 {@apply absolute -bottom-28 -left-24 w-90 h-90 rounded-full bg-primary/25 blur-[110px]}
+  .review-header {@apply font-semibold text-3xl sm:text-[44px] lg:text-[40px] leading-tight max-w-xl lg:max-w-md text-center lg:text-left}
+  .review-desc {@apply text-lg font-normal leading-6 sm:leading-7 text-[#4F4F4F] max-w-xl text-center lg:text-left}
+  .review-card {@apply bg-white rounded-3xl p-6}
+  .review-img{@apply w-20 h-20 rounded-full overflow-hidden}
+  .review-img img{@apply rounded-full w-full h-full object-cover}
+  .review-text{@apply mt-6 text-lg font-normal leading-6 text-[#4F4F4F]}
 
 
   .card-content {@apply bg-white/60 backdrop-blur rounded-full px-3 py-1.5 shrink-0 text-xs font-medium text-[#4F4F4F]}
