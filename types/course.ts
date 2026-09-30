@@ -4,7 +4,6 @@ export type CardProps = {
     author: string
     image: string
     price: string
-    priceLabel: string
     rating: string
     level: string
     lessons: string
