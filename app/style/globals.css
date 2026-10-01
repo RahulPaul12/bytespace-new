@@ -72,6 +72,11 @@
   .card-price span {@apply text-xs font-body text-[#4F4F4F] font-normal}
   .card-user-text {@apply w-8 h-8 rounded-full bg-secondary text-xs font-medium grid place-items-center}
 
+  .drawer { @apply w-screen h-full fixed top-0 left-0  z-[60] opacity-0 invisible bg-black/60 transition-all duration-700!}
+  .drawer.active { @apply opacity-100 visible }
+  .drawer-content { @apply fixed top-0 right-0 translate-x-full z-[50] h-screen overflow-y-auto transition-all duration-700! bg-white }
+  .drawer.active .drawer-content { @apply translate-x-0}
+
   .pagination-arrow-btn {@apply w-11 h-11 sm:w-12 sm:h-12 shrink-0 grid place-items-center rounded-full border border-neutral-300 text-neutral-800 hover:bg-neutral-100 transition}
   .pagination-btn{@apply grid place-items-center rounded-full text-black-shadow font-heading font-semibold text-base sm:text-lg}
 

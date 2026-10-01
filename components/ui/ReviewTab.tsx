@@ -1,5 +1,6 @@
 import Image from "next/image"
-
+import { reviews } from "@/data/review"
+import ReviewCard from "./ReviewCard"
 const ReviewTab = () => {
     return (
         <section className="mt-10">
@@ -83,86 +84,9 @@ const ReviewTab = () => {
                     <button className="rating-tab-btn"><i className="text-2xl icon-star"></i> 1</button>
                 </div>
                 <div className="mt-6 space-y-6">
-                    <article className="review-card">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <Image src="/images/user/user-1.png" alt="PurePearl Studio" width={52} height={52} className="rounded-full object-cover"/>
-                                <div>
-                                    <p className="reviewer-name">PurePearl Studio</p>
-                                    <p className="reviewer-desc">UI/UX Designer</p>
-                                </div>
-                            </div>
-                            <span className="review-time">a year ago</span>
-                        </div>
-                        <div className="mt-6 flex gap-1 text-2xl">
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                        </div>
-                        <p className="review-text">"The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!"</p>
-                    </article>
-                    <article className="review-card">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <Image src="/images/user/user-2.png" alt="Albert Flores" width={52} height={52} className="rounded-full object-cover"/>
-                                <div>
-                                    <p className="reviewer-name">Albert Flores</p>
-                                    <p className="reviewer-desc">UI/UX Designer</p>
-                                </div>
-                            </div>
-                            <span className="review-time">a year ago</span>
-                        </div>
-                        <div className="mt-6 flex gap-1 text-2xl">
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                        </div>
-                        <p className="review-text">"The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!"</p>
-                    </article>
-                    <article className="review-card">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <Image src="/images/user/user-3.png" alt="Cody Fisher" width={52} height={52} className="rounded-full object-cover"/>
-                                <div>
-                                    <p className="reviewer-name">Cody Fisher</p>
-                                    <p className="reviewer-desc">UI/UX Designer</p>
-                                </div>
-                            </div>
-                            <span className="review-time">a year ago</span>
-                        </div>
-                        <div className="mt-6 flex gap-1 text-2xl">
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                        </div>
-                        <p className="review-text">"The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!"</p>
-                    </article>
-                    <article className="review-card">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <Image src="/images/user/user-4.png" alt="Brooklyn Simmons" width={52} height={52} className="rounded-full object-cover"/>
-                                <div>
-                                    <p className="reviewer-name">Brooklyn Simmons</p>
-                                    <p className="reviewer-desc">UI/UX Designer</p>
-                                </div>
-                            </div>
-                            <span className="review-time">a year ago</span>
-                        </div>
-                        <div className="mt-6 flex gap-1 text-2xl">
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                            <i className="icon-star"></i>
-                        </div>
-                        <p className="review-text">"The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!"</p>
-                    </article>
+                    {reviews.map((review) => (
+                        <ReviewCard key={review.id} {...review} />
+                    ))}
                 </div>
             </div>
         </section>

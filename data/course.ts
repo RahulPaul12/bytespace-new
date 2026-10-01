@@ -1,4 +1,6 @@
-export const courses = [
+import { CardProps } from "@/types/course";
+
+export const courses:CardProps[] = [
     {
         slug: "learn-figma-from-basic",
         title: "Learn Figma from Basic",
