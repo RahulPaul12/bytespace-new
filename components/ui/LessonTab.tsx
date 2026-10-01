@@ -1,5 +1,5 @@
-import Image from "next/image"
-
+import { modules } from "@/data/lesson"
+import ModuleCard from "./ModuleCard"
 const LessonTab = () => {
     return (
         <div className="mt-10">
@@ -10,60 +10,9 @@ const LessonTab = () => {
             <div className="mt-6 space-y-6">
                 <h2 className="font-semibold text-xl">Lesson List</h2>
                 <div className="mt-6 flex flex-col gap-6">
-                    <div className="flex items-center gap-3">
-                        <div className="w-18 h-18 rounded-3xl bg-secondary flex items-center justify-center shrink-0">
-                            <i className="icon-video text-[40px]"></i>
-                        </div>
-                        <div>
-                            <p className="text-base font-medium text-black-shadow">Module 1: Introduction to Digital Assets</p>
-                            <p className="text-base font-normal text-[#4F4F4F]">Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.</p>
-                        </div>
-                    </div>                                       
-                    <div className="flex items-center gap-3">
-                        <div className="w-18 h-18 rounded-3xl bg-secondary flex items-center justify-center shrink-0">
-                            <i className="icon-video text-[40px]"></i>
-                        </div>
-                        <div>
-                            <p className="text-base font-medium text-black-shadow">Module 2: Design Principles for Impact</p>
-                            <p className="text-base font-normal text-[#4F4F4F]">Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.</p>
-                        </div>
-                    </div>                    
-                    <div className="flex items-center gap-3">
-                        <div className="w-18 h-18 rounded-3xl bg-secondary flex items-center justify-center shrink-0">
-                            <i className="icon-video text-[40px]"></i>
-                        </div>
-                        <div>
-                            <p className="text-base font-medium text-black-shadow">Module 4:  User-Centric Design Strategies</p>
-                            <p className="text-base font-normal text-[#4F4F4F]">Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.</p>
-                        </div>
-                    </div>                    
-                    <div className="flex items-center gap-3">
-                        <div className="w-18 h-18 rounded-3xl bg-secondary flex items-center justify-center shrink-0">
-                            <i className="icon-video text-[40px]"></i>
-                        </div>
-                        <div>
-                            <p className="text-base font-medium text-black-shadow">Module 5: Interactive Media and Engagement</p>
-                            <p className="text-base font-normal text-[#4F4F4F]">Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.</p>
-                        </div>
-                    </div>                    
-                    <div className="flex items-center gap-3">
-                        <div className="w-18 h-18 rounded-3xl bg-secondary flex items-center justify-center shrink-0">
-                            <i className="icon-video text-[40px]"></i>
-                        </div>
-                        <div>
-                            <p className="text-base font-medium text-black-shadow">Module 6: Project Showcase and Critique</p>
-                            <p className="text-base font-normal text-[#4F4F4F]">Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.</p>
-                        </div>
-                    </div>                    
-                    <div className="flex items-center gap-3">
-                        <div className="w-18 h-18 rounded-3xl bg-secondary flex items-center justify-center shrink-0">
-                            <i className="icon-video text-[40px]"></i>
-                        </div>
-                        <div>
-                            <p className="text-base font-medium text-black-shadow">Module 7: Optimizing Digital Assets for Various Platforms</p>
-                            <p className="text-base font-normal text-[#4F4F4F]">Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.</p>
-                        </div>
-                    </div>                                   
+                    {modules.map((module)=> (
+                        <ModuleCard key={module.id} {...module}/>
+                    ))}                                
                 </div>
             </div>
             <div className="mt-6 space-y-6">

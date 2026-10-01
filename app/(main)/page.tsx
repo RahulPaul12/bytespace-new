@@ -4,6 +4,9 @@ import { courses } from "@/data/course"
 import CardComponent from "@/components/ui/CardComponent";
 import Link from "next/link";
 import LogoSliderComponent from "@/components/ui/LogoSliderComponent";
+import { categories } from "@/data/category";
+import { testimonial } from "@/data/testimonial";
+import TestimonialCardComponent from "@/components/ui/TestimonialCardComponent";
 export default function Home() {
     return (
         <main>
@@ -75,24 +78,9 @@ export default function Home() {
                     <p className="hero-section-desc text-gray">At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.</p>
                 </div>
                 <div className="mb-9 flex gap-x-4 gap-y-5 overflow-x-auto pb-2 sm:mx-auto sm:px-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:max-w-6xl">
-                    <button className="category-btn">Featured</button>
-                    <button className="category-btn">Music</button>
-                    <button className="category-btn">Drawing &amp; Painting</button>
-                    <button className="category-btn">Marketing</button>
-                    <button className="category-btn">Animation</button>
-                    <button className="category-btn">Social Media</button>
-                    <button className="category-btn">UI/UX Design</button>
-                    <button className="category-btn">Creative Marketing</button>
-                    <button className="category-btn">Digital Illustration</button>
-                    <button className="category-btn">Film &amp; Video</button>
-                    <button className="category-btn">Crafts</button>
-                    <button className="category-btn">Freelance &amp; Entrepreneurship</button>
-                    <button className="category-btn">Graphic Design</button>
-                    <button className="category-btn">Photography</button>
-                    <button className="category-btn">Productivity</button>
-                    <button className="category-btn">Web Development</button>
-                    <button className="category-btn">Data Science</button>
-                    <button className="category-btn">Cooking</button>
+                    {categories.map((category)=> (
+                        <button key={category.id} className="category-btn">{category.name}</button>
+                    ))}
                     <button className="shrink-0 px-3 py-2 text-xs text-primary">+ More</button>
                 </div>
                 <div className="pt-4 sm:py-9 grid gap-6 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -150,16 +138,16 @@ export default function Home() {
             <section className="pt-15">
                 <div className="relative overflow-hidden bg-[#F7F9F2]">
                     <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-                        <div className="absolute -top-24 left-[25%] w-[420px] h-[420px] rounded-full bg-secondary/60 blur-[150px]"></div>
-                        <div className="absolute -bottom-28 -left-24 w-[360px] h-[360px] rounded-full bg-secondary/50 blur-[80px]"></div>
-                        <div className="absolute -bottom-28 -right-24 w-[360px] h-[360px] rounded-full bg-primary/25 blur-[100px]"></div>
-                        <div className="absolute bottom-1/2 -left-24 w-[360px] h-[360px] rounded-full bg-primary/25 blur-[100px]"></div>
-                        <div className="absolute -top-28 -right-24 w-[360px] h-[360px] rounded-full bg-primary/10 blur-[100px]"></div>
+                        <div className="absolute -top-24 left-[25%] w-105 h-105 rounded-full bg-secondary/60 blur-[150px]"></div>
+                        <div className="absolute -bottom-28 -left-24 w-90 h-90 rounded-full bg-secondary/50 blur-[80px]"></div>
+                        <div className="absolute -bottom-28 -right-24 w-90 h-90 rounded-full bg-primary/25 blur-[100px]"></div>
+                        <div className="absolute bottom-1/2 -left-24 w-90 h-90 rounded-full bg-primary/25 blur-[100px]"></div>
+                        <div className="absolute -top-28 -right-24 w-90 h-90 rounded-full bg-primary/10 blur-[100px]"></div>
                     </div>
-                    <div className="relative px-5 py-14 sm:py-18 container">
-                        <div className="grid gap-5 lg:grid-cols-2 lg:gap-18 items-center justify-items-center mb-18">
+                    <div className="relative px-5 pb-14 sm:pb-18 pt-16 sm:pt-30 container">
+                        <div className="grid gap-5 lg:grid-cols-2 lg:gap-18 items-center justify-items-center mb-10">
                             <div className="lg:order-1 order-2">
-                                <h2 className="font-semibold text-3xl sm:text-[44px] lg:text-[40px] leading-tight text-center lg:text-left">Your Path to Professional Growth Starts Here!</h2>
+                                <h2 className="home-section-header text-center lg:text-left">Your Path to Professional Growth Starts Here!</h2>
                                 <p className="review-desc mt-10 text-center! lg:text-left! mx-auto">Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.</p>
                                 <dl className="mt-10 flex justify-center lg:justify-start gap-10 sm:gap-14">
                                     <div><dt className="sr-only">Students</dt><dd className="font-head font-medium text-2xl sm:text-3xl text-primary">12K</dd><p className="text-lg font-normal text-[#4B4C53]">Students</p></div>
@@ -176,8 +164,8 @@ export default function Home() {
                                 <Image src={"/images/growth-2.png"} alt="Growth" width={1000} height={1000} className="w-full h-full object-cover"/>
                             </div>
                             <div>
-                                <h2 className="max-w-97.5 font-semibold text-3xl sm:text-[44px] lg:text-[40px] leading-tight">Create & Manage Courses Easily.</h2>
-                                <p className="review-desc mt-10"><span className="font-bold">ByteSpace</span> supports individuals or entities in the creation, publication, and administration of educational courses.</p>
+                                <h2 className="max-w-100 home-section-header">Create & Manage Courses Easily.</h2>
+                                <p className="home-section-desc mt-10"><span className="font-bold">ByteSpace</span> supports individuals or entities in the creation, publication, and administration of educational courses.</p>
                                 <ul className="mt-10 space-y-3 text-lg font-medium">
                                     <li className="flex items-center gap-2"><i className="icon-check-circle text-primary text-xl"></i>Share Your Expertise</li>
                                     <li className="flex items-center gap-2"><i className="icon-check-circle text-primary text-xl"></i>Monetize Your Passion</li>
@@ -214,47 +202,13 @@ export default function Home() {
                             <p className="testimonial-desc home-section-desc"> At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.</p>
                         </div>
                         <div className="mt-10 sm:mt-18 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 items-start">
-                            <figure className="testimonial-card">
-                                <div className="testimonial-img">
-                                    <Image src="/images/user/review-1.png" alt="review-1" width={80} height={80}/>
-                                </div>
-                                <figcaption className="mt-6">
-                                    <h6 className="font-semibold text-xl">Sarah M.</h6>
-                                    <p className="text-lg font-normal text-primary">Enthusiastic Learner</p>
-                                </figcaption>
-                                <blockquote className="testimonial-text">
-                                    "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."
-                                </blockquote>
-                            </figure>
-                            <figure className="testimonial-card">
-                                <div className="testimonial-img">
-                                    <Image src="/images/user/review-2.png" alt="review-1" width={80} height={80}/>
-                                </div>
-                                <figcaption className="mt-6">
-                                    <h6 className="font-semibold text-xl">James L.</h6>
-                                    <p className="text-lg font-normal text-primary">Lifelong Learner</p>
-                                </figcaption>
-                                <blockquote className="testimonial-text">
-                                    "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."
-                                </blockquote>
-                            </figure>
-                            <figure className="testimonial-card">
-                                <div className="testimonial-img">
-                                    <Image src="/images/user/review-3.png" alt="review-1" width={80} height={80}/>
-                                </div>
-                                <figcaption className="mt-6">
-                                    <h6 className="font-semibold text-xl">Alex B.</h6>
-                                    <p className="text-lg font-normal text-primary">Inspired Creator</p>
-                                </figcaption>
-                                <blockquote className="testimonial-text">
-                                    "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally."
-                                </blockquote>
-                            </figure>
+                            {testimonial.map((t)=> (
+                                <TestimonialCardComponent key={t.id} {...t} />
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
-
         </main>
     );
 }
