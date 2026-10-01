@@ -7,7 +7,7 @@ const CourseDetails = () => {
         <>
         <section className="bg-grid pt-40 pb-12 sm:pb-18 mb-9">
             <div className="container">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start flex-wrap justify-between gap-4">
                     <div className="text-[#F5F5F6]">
                         <h1 className="section-heading text-left">Build Digital Asset: A Comprehensive Guide</h1>
                         <h6 className="font-semibold text-xl">Unlock the Power of Digital Creation with Expert Guidance</h6>
